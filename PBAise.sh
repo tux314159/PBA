@@ -13,6 +13,7 @@ for d in *; do
     for f in $(sh -c "echo diffs/{$(echo $pbarules),$(echo $pbaweap),$(echo $pbanotif),$(echo $rest)}"); do
         cp $f new/$d
     done
+    (cd new/$d; find -name '*.yaml' -exec dos2unix {} \;)
     sed -i "s|\(Rules:.*\)|\1,$pbarules|g" new/$d/map.yaml
     sed -i "s|bi-rules.yaml,||g" new/$d/map.yaml
     sed -i "s|\(Weapons:.*\)|\1,$pbaweap|g" new/$d/map.yaml
