@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
 
 rules="pba-balance-rules.yaml,pba-briefing-rules.yaml,bi-balance-rules.yaml,bi-lobby-rules.yaml,bi-player-rules.yaml,ERCC21andBCC-rules.yaml"
 notifs="pba-notifications.yaml"
@@ -9,7 +9,7 @@ others="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bo
 mkdir new
 
 function updatething {
-    sed -i'.bkp' "s|\($1:.*\)|\1,$2|g" $3
+    sed -i.bkp "s|\($1:.*\)|\1,$2|g" $3
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
 
@@ -42,7 +42,6 @@ mkdir sub
 mv new/*.oramap sub
 rm -rf new
 
-find . -name '*.bkp' -print -delete
 rm -f sub.zip
 zip -r sub.zip sub >/dev/null
 rm -rf sub
