@@ -156,6 +156,8 @@ AFLD:
 		Prerequisites: dome, ~structures.soviet, ~techlevel.medium, #dome, ~structures.soviet, ~techlevel.medium, ~!structures.ukraine
 	-AirstrikePower@spyplane:
 	-AirstrikePower@parabombs:
+	ParatroopersPower@paratroopers:
+		ChargeInterval: 6000 #7500
 
 -AFLD.Ukraine:
 
