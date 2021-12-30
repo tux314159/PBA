@@ -18,6 +18,7 @@ for d in *; do
     sed -i "s|\(Weapons:.*\)|\1,$pbaweap|g" new/$d/map.yaml
     sed -i "s|\(Notifications:.*\)|\1$pbanotif|g" new/$d/map.yaml # SPECIAL CASE! NO COMMA
     sed -i "s|\(Title:.*\)\[.*\]|\1[PBA]|g" new/$d/map.yaml
+    sed -i "s|\(Categories:.*\)|Categories: PBA|g" new/$d/map.yaml
     (cd new/$d; zip -r ../$d.oramap . >/dev/null)
 done
 
