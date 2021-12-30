@@ -8,18 +8,20 @@ rest="bi-balance-rules.yaml,bi-lobby-rules.yaml,bi-player-rules.yaml,bi-sequence
 mkdir new
 
 for d in *; do
+    mapfile=new/$d/map.yaml
     if [ ! -d $d ]; then continue; fi
     cp -R $d new
     for f in $(sh -c "echo diffs/{$(echo $pbarules),$(echo $pbaweap),$(echo $pbanotif),$(echo $rest)}"); do
         cp $f new/$d
     done
     (cd new/$d; find -name '*.yaml' -exec dos2unix {} \;)
-    sed -i "s|\(Rules:.*\)|\1,$pbarules|g" new/$d/map.yaml
-    sed -i "s|bi-rules.yaml,||g" new/$d/map.yaml
-    sed -i "s|\(Weapons:.*\)|\1,$pbaweap|g" new/$d/map.yaml
-    sed -i "s|\(Notifications:.*\)|\1$pbanotif|g" new/$d/map.yaml # SPECIAL CASE! NO COMMA
-    sed -i "s|\(Title:.*\)\[.*\]|\1[PBA]|g" new/$d/map.yaml
-    sed -i "s|\(Categories:.*\)|Categories: PBA|g" new/$d/map.yaml
+    sed -i "s|\(Rules:.*\)|\1,$pbarules|g" $mapfile
+    sed -i "s|bi-rules.yaml,||g" $mapfile
+    sed -i "s|\(Weapons:.*\)|\1,$pbaweap|g" $mapfile
+    sed -i "s|\(Notifications:.*\)|\1$pbanotif|g" $mapfile # SPECIAL CASE! NO COMMA
+    grep "Notifications:" $mapfile || printf "\nNotifications: $pbanotif\n" >> $mapfile
+    sed -i "s|\(Title:.*\)\[.*\]|\1[PBA]|g" $mapfile
+    sed -i "s|\(Categories:.*\)|Categories: PBA|g" $mapfile
     (cd new/$d; zip -r ../$d.oramap . >/dev/null)
 done
 
