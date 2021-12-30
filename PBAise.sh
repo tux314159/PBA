@@ -31,7 +31,7 @@ for d in *; do
     sed -i.bkp "s/\(Title:.*\)\[.*\]/\1[PBA]/g" $mapfile
     sed -i.bkp "s/\(Categories:.*\)/Categories: PBA/g" $mapfile
     rm new/*/*.bkp
-    (cd new/$d; zip -r ../$d.oramap . >/dev/null)
+    (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)
 done
 
 mv new/*.oramap sub
