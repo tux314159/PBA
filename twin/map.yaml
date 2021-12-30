@@ -1309,7 +1309,7 @@ Actors:
 		Owner: Neutral
 		Location: 70,53
 
-Rules: pinkrocks_rul.yaml, pinkdefaults_rul.yaml, pinktrees_rul.yaml, civilian.yaml, bi-briefing-rules.yaml, bi-player-rules.yaml, pinkrivers_rul.yaml, bi-lobby-rules.yaml, bi-balance-rules.yaml, hlpr_deco.yaml, ERCC21andBCC-rules.yaml, ragl-balance-rules.yaml
+Rules: pinkrocks_rul.yaml, pinkdefaults_rul.yaml, pinktrees_rul.yaml, civilian.yaml, bi-player-rules.yaml, pinkrivers_rul.yaml, bi-lobby-rules.yaml, bi-balance-rules.yaml, hlpr_deco.yaml, ERCC21andBCC-rules.yaml, ragl-balance-rules.yaml
 Sequences: pinktrees_seq.yaml, ERCC2-sequences.yaml, bi-sequences.yaml, pinkrivers_seq.yaml, hlpr_sequences.yaml, pinkrocks_seq.yaml
 Weapons: ragl-weapons.yaml, bi-weapons.yaml
 Notifications: 
