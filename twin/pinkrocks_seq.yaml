@@ -1,0 +1,114 @@
+rocks_1x1_1:
+	idle: rocks_1x1
+		Start: 0
+		ZOffset: -10000
+
+rocks_1x1_2:
+	idle: rocks_1x1
+		Start: 1
+		ZOffset: -10000
+
+rocks_1x1_3:
+	idle: rocks_1x1
+		Start: 2
+		ZOffset: -10000
+
+rocks_1x1_4:
+	idle: rocks_1x1
+		Start: 3
+		ZOffset: -10000
+
+rocks_1x2_1:
+	idle: rocks_1x2
+		Start: 0
+		ZOffset: -10000
+		
+rocks_1x2_2:
+	idle: rocks_1x2
+		Start: 1
+		ZOffset: -10000
+
+rocks_2x1_1:
+	idle: rocks_2x1
+		Start: 0
+		ZOffset: -10000
+
+rocks_2x1_2:
+	idle: rocks_2x1
+		Start: 1
+		ZOffset: -10000
+		
+rocks_2x1_3:
+	idle: rocks_2x1
+		Start: 2
+		ZOffset: -10000
+
+rocks_2x1_4:
+	idle: rocks_2x1
+		Start: 3
+		ZOffset: -10000
+		
+rocks_2x1_5:
+	idle: rocks_2x1
+		Start: 4
+		ZOffset: -10000
+
+rocks1:
+	idle: rocks
+		Start: 0
+		ZOffset: -10000
+
+rocks2:
+	idle: rocks
+		Start: 1
+		ZOffset: -10000
+
+rocks3:
+	idle: rocks
+		Start: 2
+		ZOffset: -10000
+
+rocks4:
+	idle: rocks
+		Start: 3
+		ZOffset: -10000
+
+stones1:
+	idle: stones
+		Start: 0
+		ZOffset: -10000
+
+stones2:
+	idle: stones
+		Start: 1
+		ZOffset: -10000
+
+stones3:
+	idle: stones
+		Start: 2
+		ZOffset: -10000
+
+stones4:
+	idle: stones
+		Start: 3
+		ZOffset: -10000
+
+stones11:
+	idle: stones1
+		Start: 0
+		ZOffset: -10000
+
+stones12:
+	idle: stones1
+		Start: 1
+		ZOffset: -10000
+
+stones13:
+	idle: stones1
+		Start: 2
+		ZOffset: -10000
+
+stones14:
+	idle: stones1
+		Start: 3
+		ZOffset: -10000

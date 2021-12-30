@@ -1,0 +1,230 @@
+^Soldier:
+	TakeCover:
+		Duration: 50 #100
+
+PBOX:
+	Valued:
+		Cost: 700 #600
+	CustomSellValue:
+		Value: 500 #400
+	Buildable:
+		Prerequisites: tent, ~structures.allies, ~!structures.england, ~techlevel.low #Prerequisites: tent, ~structures.allies, ~techlevel.low
+
+HBOX:
+	Valued:
+		Cost: 700 #750
+	CustomSellValue:
+		Value: 500 #550
+	Buildable:
+		Prerequisites: tent, ~structures.england, ~techlevel.low #tent, ~structures.allies, ~techlevel.medium
+
+FTUR:
+	Valued:
+		Cost: 700 #600
+
+MGG:
+	Valued:
+		Cost: 800 #1000
+
+CTNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies, ~techlevel.high #atek, ~vehicles.germany, ~techlevel.high
+
+E4:
+	Valued:
+		Cost: 250 #300
+	Health:
+		HP: 5000 #4000
+	RevealsShroud:
+		Range: 5c0 #4c0
+	Buildable:
+		Prerequisites: ~barr, dome, ~infantry.ukraine, ~techlevel.medium #~barr, ftur, ~techlevel.low
+
+SHOK:
+	Valued:
+		Cost: 400 #350
+	Buildable:
+		BuildPaletteOrder: 75 #130
+		Prerequisites: ~barr, dome, ~infantry.russia, ~techlevel.medium #~barr, stek, tsla, ~infantry.russia, ~techlevel.high
+
+SPY:
+	Buildable:
+		Prerequisites: ~tent, dome, ~techlevel.medium #~!infantry.england, dome, ~tent, ~techlevel.medium
+
+-SPY.England:
+
+DOME:
+	SupportPowerChargeBar:
+	AirstrikePower@spyplane:
+		PauseOnCondition: disabled
+		OrderName: SovietSpyPlane
+		Prerequisites: aircraft.soviet
+		Icon: spyplane
+		ChargeInterval: 3750
+		Description: Spy Plane
+		LongDesc: Reveals an area of the map.
+		SelectTargetSpeechNotification: SelectTarget
+		EndChargeSpeechNotification: SpyPlaneReady
+		CameraActor: camera.spyplane
+		CameraRemoveDelay: 150
+		UnitType: u2
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: camicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 60
+	AirstrikePower@parabombs:
+		PauseOnCondition: disabled
+		OrderName: FranceParabombs
+		Prerequisites: aircraft.france
+		Icon: parabombs
+		ChargeInterval: 6000
+		Description: Parabombs
+		LongDesc: A squad of Badgers drop parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 1
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 40
+	ParatroopersPower@paradrop:
+		PauseOnCondition: disabled
+		OrderName: GermanyParaDrop
+		Prerequisites: aircraft.germany
+		Icon: paratroopers
+		ChargeInterval: 6000
+		Description: Para Drop 
+		LongDesc: A Badger drops 2 tanks\nanywhere on the map.
+		DropItems: 2TNK, 2TNK
+		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		AllowImpassableCells: false
+		QuantizedFacings: 8
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: pinficon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+	ProvidesPrerequisite@england:
+		Factions: england
+		Prerequisite: aircraft.england
+	ProvidesPrerequisite@france:
+		Factions: france
+		Prerequisite: aircraft.france
+	ProvidesPrerequisite@germany:
+		Factions: germany
+		Prerequisite: aircraft.germany
+	ProvidesPrerequisite@englishstructure:
+		RequiresPrerequisites: structures.england
+		Prerequisite: aircraft.england
+	ProvidesPrerequisite@frenchstructure:
+		RequiresPrerequisites: structures.france
+		Prerequisite: aircraft.france
+	ProvidesPrerequisite@germanstructure:
+		RequiresPrerequisites: structures.germany
+		Prerequisite: aircraft.germany
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine
+		Prerequisite: aircraft.soviet
+	ProvidesPrerequisite@sovietstructure:
+		RequiresPrerequisites: structures.soviet
+		Prerequisite: aircraft.soviet
+
+2TNK:
+	AttackTurreted:
+		PauseOnCondition: parachute
+
+AFLD:
+	Buildable:
+		Prerequisites: dome, ~structures.soviet, ~techlevel.medium, #dome, ~structures.soviet, ~techlevel.medium, ~!structures.ukraine
+	-AirstrikePower@spyplane:
+	-AirstrikePower@parabombs:
+
+-AFLD.Ukraine:
+
+MIG:
+	Rearmable:
+		RearmActors: afld #afld, afld.ukraine
+
+YAK:
+	Rearmable:
+		RearmActors: afld #afld, afld.ukraine
+
+PDOX:
+	ChronoshiftPower@chronoshift:
+		Prerequisites: structures.allies #!pdox.germany
+		Dimensions: 5, 5 #3, 3
+		Footprint: __x__ _xxx_ xxxxx _xxx_ __x__ #_x_ xxx _x_
+	-ChronoshiftPower@advancedchronoshift:
+
+CTNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies, ~techlevel.high #atek, ~vehicles.germany, ~techlevel.high
+
+STNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.england, ~techlevel.high #atek, ~vehicles.france, ~techlevel.high
+
+MGG:
+	Buildable:
+		Prerequisites: atek, ~vehicles.germany, ~techlevel.high #atek, ~vehicles.england, ~techlevel.high
+
+ATEK:
+	GpsPower:
+		PauseOnCondition: disabled || !gpsactivated #disabled
+		ChargeInterval: 0 #12000
+		RevealDelay: 30 #375
+		DisplayTimerRelationships: None #Ally, Neutral, Enemy
+		Prerequisites: gpsactive
+		StartFullyCharged: True
+	SpawnActorPower:
+		PauseOnCondition: disabled
+		Actor: powergps
+		Icon: gps
+		LifeTime: 750
+		ChargeInterval: 4500
+		Description: GPS Satellite
+		LongDesc: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
+		EffectImage: crate-effects
+		EffectSequence: gps
+		EffectPalette: effect
+		LaunchSpeechNotification: SatelliteInitialzed
+		IncomingSpeechNotification: SatelliteInitialzed
+		DisplayTimerRelationships: None
+	GrantConditionOnPrerequisite@gpsactivation:
+		Prerequisites: gpsactive
+		Condition: gpsactivated
+
+powergps:
+	Interactable: 
+	EditorOnlyTooltip:
+		Name: (reveals area to owner)
+	AlwaysVisible: 
+	Immobile:
+		OccupiesSpace: false
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody: 
+	RenderSpritesEditorOnly:
+		Image: camera
+	MapEditorData:
+		Categories: System
+	ProvidesPrerequisite@gap:
+		Prerequisite: gpsactive

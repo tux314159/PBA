@@ -1,0 +1,32 @@
+rivers_3x2_1:
+	Inherits@Size: ^3x2
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rivers_3x2_2:
+	Inherits@Size: ^3x2
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rivers_2x3_1:
+	Inherits@Size: ^2x3
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rivers_4x3_1:
+	Inherits@Size: ^3x2
+	Inherits@CustomTile: ^CustomMapDebris
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4, 3
+
+fordact1:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^3x3
+	Building:
+		Footprint: ___ ___
+		Dimensions: 3, 2
+
+fordact2:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^3x3
+	Building:
+		Footprint: __ __ __
+		Dimensions: 2, 3

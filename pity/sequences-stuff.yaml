@@ -1,0 +1,195 @@
+baincrate:
+	Defaults:
+		ZOffset: 511
+	idle: wcrate
+	land: wcrate
+	water: wwcrate
+		Length: *
+		Tick: 500
+
+firene:
+	open: fire1
+		Length: 14
+	idle: fire1
+		Start: 1
+		Length: 14
+
+playerflare:
+	open: playersmoke
+		Length: 72
+		Tick: 120
+		ZOffset: 1023
+	idle: playersmoke
+		Start: 72
+		Length: 20
+		Tick: 120
+		ZOffset: 1023
+
+emu222:
+	open: empulse
+		Length: 9
+	idle: empulse
+		Start: 1
+		Length: 9
+		Tick: 30
+		ZOffset: 0c112
+
+iro2:
+	open: invulbox
+		Length: 7
+	idle: invulbox
+		Start: 7
+		Length: 8
+		Tick: 110
+		ZOffset: 0c112
+
+ear2:
+	open: gpsbox
+		Length: 6
+	idle: gpsbox
+		Start: 7
+		Length: 9
+		Tick: 130
+		ZOffset: 0c112
+
+pum2:
+	open: fb1
+		Length: 3
+	idle: fb1
+		Start: 0
+		Length: 7
+		Tick: 140
+		ZOffset: 0c112
+		
+
+stars1:
+	open: twinkle3
+		Length: 4
+	idle: twinkle3
+		Start: 0
+		Length: 5
+		Tick: 130
+
+stars2:
+	open: twinkle2
+		Length: 4
+	idle: twinkle2
+		Start: 0
+		Length: 5
+		Tick: 110
+
+stars3:
+	open: twinkle1
+		Length: 4
+	idle: twinkle1
+		Start: 0
+		Length: 5
+		Tick: 170
+
+stars4:
+	open: twinkle1
+		Length: 2
+	idle: twinkle1
+		Start: 0
+		Length: 2
+		Tick: 520
+
+stars5:
+	open: twinkle1
+		Length: 2
+	idle: twinkle1
+		Start: 0
+		Length: 2
+		Tick: 520
+
+greenthi:
+	open: stealth2
+		Length: 3
+	idle: stealth2
+		Start: 2
+		Length: 1
+		Tick: 520
+
+
+hole:
+	open: cr5
+		Length: 1
+	idle: cr5
+		Start: 0
+		Length: 1
+
+liti:
+	open: litning
+		Length: 4
+		ZOffset: 1023
+	idle: litning
+		Start: 0
+		Length: 8
+		ZOffset: 1023
+		Tick: 60
+
+nspen:
+	idle: spenmake
+		Start: 8
+		Length: 1
+		Offset: 0,2
+	damaged-idle:
+		Start: 1
+		Offset: 0,2
+	make: spenmake
+		Length: *
+		Offset: 0,2
+	icon: spenicon
+
+nsyrd:
+	idle: syrdmake
+		Start: 5
+		Length: 1
+		Offset: 0,2
+	damaged-idle:
+		Start: 1
+	make: syrdmake
+		Length: *
+	icon: syrdicon
+	fake-icon: syrficon
+
+portal:
+	open: pdox
+		Length: 4
+	idle: pdox
+		Start: 34
+		Length: 23
+		Tick: 120
+		ZOffset: 0c112
+
+tportal:
+	open: tslamake
+		Length: 4
+	idle: tslamake
+		Start: 5
+		Length: 4
+		Tick: 120
+		ZOffset: 0c102
+
+pearlstar:
+	open: ttnk
+		Start: 32
+		Length: 4
+	idle: ttnk
+		Start: 32
+		Length: 21
+		Tick: 80
+
+redport:
+	open: iron
+		Start: 13
+		Length: 4
+	idle: iron
+		Start: 13
+		Length: 9
+		Tick: 110
+
+
+
+
+

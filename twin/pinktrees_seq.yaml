@@ -1,0 +1,123 @@
+tree1:
+	idle: trees
+		Start: 0
+
+tree1.husk:
+	idle: trees
+		Start: 1
+		
+tree2:
+	idle: trees
+		Start: 2
+
+tree2.husk:
+	idle: trees
+		Start: 3
+		
+tree3:
+	idle: trees
+		Start: 4
+
+tree3.husk:
+	idle: trees
+		Start: 5
+		
+tree4:
+	idle: trees
+		Start: 6
+
+tree4.husk:
+	idle: trees
+		Start: 7
+		
+tree5:
+	idle: trees
+		Start: 8
+
+tree5.husk:
+	idle: trees
+		Start: 9
+		
+tree6:
+	idle: trees
+		Start: 10
+
+tree6.husk:
+	idle: trees
+		Start: 11
+		
+cypr1:
+	idle: cypr
+		Start: 0
+    
+cypr1.husk:
+	idle: cypr
+		Start: 1
+        
+cypr2:
+	idle: cypr
+		Start: 2
+    
+cypr2.husk:
+	idle: cypr
+		Start: 3
+        
+tg1:
+	idle: tg
+		Start: 0
+		Offset: 13, -13
+        
+tg1.husk:
+	idle: tg
+		Start: 1
+		Offset: 13, -13
+        
+tg2:
+	idle: tg
+		Start: 2
+		Offset: 13, -13
+    
+tg2.husk:
+	idle: tg
+		Start: 3
+		Offset: 13, -13
+        
+tgc1:
+	idle: tgc
+		Start: 0
+        
+tgc1.husk:
+	idle: tgc
+		Start: 1
+        
+tgc2:
+	idle: tgc
+		Start: 2
+        
+tgc2.husk:
+	idle: tgc
+		Start: 3
+        
+tgb:
+	idle: tgb
+		Start: 0
+        
+tgb.husk:
+	idle: tgb
+		Start: 1
+        
+tgd:
+	idle: tgd
+		Start: 0
+        
+tgd.husk:
+	idle: tgd
+		Start: 1
+        
+tgd2:
+	idle: tgd
+		Start: 2
+        
+tgd2.husk:
+	idle: tgd
+		Start: 3

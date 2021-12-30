@@ -1,0 +1,48 @@
+World:
+    MapOptions:
+        TechLevelDropdownLocked: true
+        TechLevel: unrestricted
+        # other options are infonly, low, medium, nosuper (d2k also has: high)
+        ShortGameCheckboxEnabled: true
+        ShortGameCheckboxLocked: true
+        GameSpeedDropdownLocked: true
+        GameSpeed: default
+        # other options are slower, fast, faster, fastest
+    CrateSpawner: #random crates on/off
+        CheckboxEnabled: false
+        CheckboxLocked: true
+    MapBuildRadius:
+        AllyBuildRadiusCheckboxEnabled: true #can build in allies base
+        AllyBuildRadiusCheckboxLocked: true
+        BuildRadiusCheckboxEnabled: true #no build radius limitations
+        BuildRadiusCheckboxLocked: true		
+    SpawnMPUnits:
+        DropdownLocked: true
+        StartingUnitsClass: none #this means MCV only
+        #other options are light, heavy  (light support and heavy support)
+    MPStartLocations:
+        SeparateTeamSpawnsCheckboxEnabled: false	
+        SeparateTeamSpawnsCheckboxLocked: true
+    TimeLimitManager:
+        TimeLimitLocked: True
+Player:
+    Shroud:
+        ExploredMapCheckboxEnabled: true	
+        ExploredMapCheckboxLocked: true
+        FogCheckboxLocked: true
+        FogCheckboxEnabled: true
+    LobbyPrerequisiteCheckbox@GLOBALBOUNTY:
+        Enabled: true
+        Locked: false
+    LobbyPrerequisiteCheckbox@REUSABLEENGINEERS:
+        Enabled: true
+        Locked: false
+    LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY: #enable re-deployable MCV (only RA and CNC)
+        Enabled: true
+        Locked: true		
+    PlayerResources:
+        SelectableCash: 2500, 5000, 7500, 10000 
+        #these are the defaults, make sure to add your desired value into this list!
+        DefaultCash: 5000 
+        #only set to something listed before (other players can't join your game if you don't)
+        DefaultCashDropdownLocked: true

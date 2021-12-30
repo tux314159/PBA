@@ -1,0 +1,29 @@
+rivers_3x2_1:
+	idle: rivers_3x2
+		Start: 0
+		ZOffset: -10000
+		
+rivers_3x2_2:
+	idle: rivers_3x2
+		Start: 1
+		ZOffset: -10000
+		
+rivers_2x3_1:
+	idle: rivers_2x3
+		Start: 0
+		ZOffset: -10000
+		
+rivers_4x3_1:
+	idle: rivers_4x3
+		Start: 0
+		ZOffset: -10000
+
+fordact1:
+	idle: fordhorz
+		Start: 0
+		ZOffset: -10000
+
+fordact2:
+	idle: fordvert
+		Start: 0
+		ZOffset: -10000

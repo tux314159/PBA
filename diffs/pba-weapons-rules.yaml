@@ -1,0 +1,10 @@
+Vulcan:
+	ReloadDelay: 45 #30
+
+FireballLauncher:
+	ReloadDelay: 75 #65
+	BurstDelays: 25 #20
+
+Flamer:
+	Projectile: Bullet
+		Speed: 250 #170

@@ -1,0 +1,127 @@
+rocks_1x1_1:
+	Inherits@Size: ^1x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_1x1_2:
+	Inherits@Size: ^1x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_1x1_3:
+	Inherits@Size: ^1x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_1x1_4:
+	Inherits@Size: ^1x1
+	Inherits@CustomTile: ^CustomMapDebris
+
+rocks_1x2_1:
+	Inherits@Size: ^1x2
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_1x2_2:
+	Inherits@Size: ^1x2
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_2x1_1:
+	Inherits@Size: ^2x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_2x1_2:
+	Inherits@Size: ^2x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_2x1_3:
+	Inherits@Size: ^2x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_2x1_4:
+	Inherits@Size: ^2x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks_2x1_5:
+	Inherits@Size: ^2x1
+	Inherits@CustomTile: ^CustomMapDebris
+	
+rocks1:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x2
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+
+rocks2:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x2
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+
+rocks3:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x2
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+
+rocks4:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x2
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+		
+stones1:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x1
+  	Building:
+		Footprint: __
+		Dimensions: 2, 1
+        
+stones2:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x1
+  	Building:
+		Footprint: __
+		Dimensions: 2, 1
+        
+stones3:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x1
+  	Building:
+		Footprint: __
+		Dimensions: 2, 1
+        
+stones4:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^2x1
+  	Building:
+		Footprint: __
+		Dimensions: 2, 1
+        
+stones11:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^1x2
+  	Building:
+		Footprint: _ _
+		Dimensions: 1, 2
+        
+stones12:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^1x2
+  	Building:
+		Footprint: _ _
+		Dimensions: 1, 2
+        
+stones13:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^1x2
+  	Building:
+		Footprint: _ _
+		Dimensions: 1, 2
+        
+stones14:
+	Inherits@CMT: ^CustomMapDebris
+	Inherits@Size: ^1x2
+  	Building:
+		Footprint: _ _
+		Dimensions: 1, 2
