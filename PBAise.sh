@@ -7,7 +7,7 @@ weaps="ragl-weapons.yaml,bi-weapons.yaml,pba-weapons-rules.yaml"
 others="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bot.shp,ref-top.shp,satellite_initialized_delay2s.aud"
 
 function updatething {
-    sed -i'' "s/\($1:.*\)|\1,$2|g" $3
+    sed -i'' "s/\($1:.*\)/\1,$2/g" $3
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
 
@@ -26,14 +26,14 @@ for d in *; do
     updatething "Weapons" $weaps $mapfile
     updatething "Notifications" $notifs $mapfile
     updatething "Sequences" $seqs $mapfile
-    sed -i'' "s/bi-rules.yaml,||g" $mapfile
+    sed -i'' "s/bi-rules.yaml,//g" $mapfile
 
     # damn
-    #sed -i "s/\(Notifications:.*\)|\1$pbanotif|g" $mapfile # SPECIAL CASE! NO COMMA
-    #grep -q "Notifications:" $mapfile || printf "\nNotifications: $pbanotif\n" >> $mapfile
+    #sed -i "s/\(Notifications:.*\)/\1$pbanotif/g" $mapfile # SPECIAL CASE! NO COMMA
+    #grep -q "Notifications:" $mapfile // printf "\nNotifications: $pbanotif\n" >> $mapfile
 
-    sed -i'' "s/\(Title:.*\)\[.*\]|\1[PBA]|g" $mapfile
-    sed -i'' "s/\(Categories:.*\)|Categories: PBA|g" $mapfile
+    sed -i'' "s/\(Title:.*\)\[.*\]/\1[PBA]/g" $mapfile
+    sed -i'' "s/\(Categories:.*\)/Categories: PBA/g" $mapfile
     (cd new/$d; zip -r ../$d.oramap . >/dev/null)
 done
 
