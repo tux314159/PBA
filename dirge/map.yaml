@@ -1466,7 +1466,7 @@ Actors:
 		Owner: Neutral
 		Location: 20,42
 
-Rules: bi-lobby-rules.yaml, bi-balance-rules.yaml, ERCC21andBCC-rules.yaml, bi-player-rules.yaml, debris_deco.yaml, hlpr_deco.yaml, ragl-balance-rules.yaml, bi-briefing-rules.yaml
+Rules: bi-lobby-rules.yaml, bi-balance-rules.yaml, ERCC21andBCC-rules.yaml, bi-player-rules.yaml, debris_deco.yaml, hlpr_deco.yaml, ragl-balance-rules.yaml
 Sequences: debris_sequences.yaml, hlpr_sequences.yaml, bi-sequences.yaml, ERCC2-sequences.yaml
 Weapons: ragl-weapons.yaml, bi-weapons.yaml
 Notifications: 

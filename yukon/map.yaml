@@ -967,7 +967,7 @@ Actors:
 		Owner: Neutral
 		Location: 75,87
 
-Rules: bi-briefing-rules.yaml, bi-player-rules.yaml, bi-lobby-rules.yaml, bi-balance-rules.yaml, blueweather.yaml, ERCC21andBCC-rules.yaml
+Rules: bi-player-rules.yaml, bi-lobby-rules.yaml, bi-balance-rules.yaml, blueweather.yaml, ERCC21andBCC-rules.yaml
 Sequences: bi-sequences.yaml, ERCC2-sequences.yaml
 Weapons: ragl-weapons.yaml, bi-weapons.yaml
 Notifications: 
