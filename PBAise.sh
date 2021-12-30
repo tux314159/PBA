@@ -14,12 +14,12 @@ for d in *; do
     for f in $(sh -c "echo diffs/{$(echo $pbarules),$(echo $pbaweap),$(echo $pbanotif),$(echo $rest)}"); do
         cp $f new/$d
     done
-    (cd new/$d; find -name '*.yaml' -exec dos2unix {} \;)
+    (cd new/$d; find -name '*.yaml' -exec dos2unix {} \; 2>/dev/null)
     sed -i "s|\(Rules:.*\)|\1,$pbarules|g" $mapfile
     sed -i "s|bi-rules.yaml,||g" $mapfile
     sed -i "s|\(Weapons:.*\)|\1,$pbaweap|g" $mapfile
     sed -i "s|\(Notifications:.*\)|\1$pbanotif|g" $mapfile # SPECIAL CASE! NO COMMA
-    grep "Notifications:" $mapfile || printf "\nNotifications: $pbanotif\n" >> $mapfile
+    grep -q "Notifications:" $mapfile || printf "\nNotifications: $pbanotif\n" >> $mapfile
     sed -i "s|\(Title:.*\)\[.*\]|\1[PBA]|g" $mapfile
     sed -i "s|\(Categories:.*\)|Categories: PBA|g" $mapfile
     (cd new/$d; zip -r ../$d.oramap . >/dev/null)
