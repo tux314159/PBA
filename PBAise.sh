@@ -7,7 +7,7 @@ weaps="ragl-weapons.yaml,bi-weapons.yaml,pba-weapons-rules.yaml"
 assets="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bot.shp,ref-top.shp,satellite_initialized_delay2s.aud"
 
 function updatething {
-    sed -i.bkp "s/\($1:.*\)/\1,$2/g" $3
+    perl -pi -e "s/($1:.*)/\1,$2/g" $3
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
 
@@ -26,11 +26,11 @@ for d in *; do
     updatething "Weapons" $weaps $mapfile
     updatething "Notifications" $notifs $mapfile
     updatething "Sequences" $seqs $mapfile
-    sed -i.bkp "s/bi-rules.yaml,//g" $mapfile
+    perl -pi -e "s/bi-rules\.yaml,//g" $mapfile
 
-    sed -i.bkp "s/\(Title:.*\)\[.*\]/\1[PBA]/g" $mapfile
-    sed -i.bkp "s/\(Categories:.*\)/Categories: PBA/g" $mapfile
-    rm new/*/*.bkp
+    perl -pi -e "s/(Title: .*?) *(\[.*\])? *$/\1 [PBA]/g" $mapfile
+    perl -pi -e "s/(Categories:.*)/Categories: PBA/g" $mapfile
+    grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
     (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)
 done
 
