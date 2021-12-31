@@ -1,0 +1,8 @@
+HeavyTeslaZap:
+	Inherits: TeslaZap
+	Range: 10c0
+
+CreepSniper:
+	Inherits: Sniper
+	Projectile: InstantHit
+		Blockable: false

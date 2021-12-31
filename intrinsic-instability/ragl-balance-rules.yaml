@@ -1,0 +1,35 @@
+TSLA:
+	RevealsShroud:
+		MinRange: 6c0
+		Range: 7c0
+
+GUN:
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 6c512
+
+1TNK:
+	Health:
+		HP: 26000
+		
+JEEP:
+	Mobile:
+		Speed: 160
+	RevealsShroud:
+		Range: 7c0
+
+TRAN:
+	Health:
+		HP: 14000
+
+MRJ:
+	Mobile:
+		Speed: 78
+
+2TNK:
+	Health:
+		HP: 46000
+
+DOME:
+	Valued:
+		Cost: 1500

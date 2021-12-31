@@ -1,0 +1,16 @@
+heavygap:
+	Inherits: gap
+
+heavytsla:
+	Inherits: tsla
+
+creepsniper:
+	Inherits: sniper
+	Cloak:
+		InitialDelay: 0
+		CloakDelay: 25
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled

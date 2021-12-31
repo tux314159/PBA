@@ -1,0 +1,23 @@
+
+		Briefing: 
+		
+		*** RAGL Season X *** 
+       
+	   This map features : 
+       
+	    * ERCC refinery 2.0 by FRenzy and Widow 
+		* Custom RAGL hype flag by ELoyros
+		* Custom RAGL balance :
+		- Tesla coil : Vision and range from 8c0 to 7c0  
+        - Turret : Vision and range from 7c0 to 6c512 
+        - LT : HP from 22000 to 26000 + does not leave husk 
+        - MT : HP from 45000 to 48000 
+        - MRJ : Speed from 85 to 78  
+        - Ranger : Vision from 8c0 to 7c0 + speed 170 from to 160 
+		- Chinook : HP from 20000 to 14000
+        - Dome : Price from 1800 to 1500
+        
+		REMINDER :  
+        /!\ Lobby options are locked according to RAGL rule point 4.1.4 - Check "engineers reusable" and "bounty", they are OFF by server default : RAGL says ON unless both agree OFF./!\  
+        
+		Enjoy RAGL X commanders

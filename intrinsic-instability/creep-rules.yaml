@@ -1,0 +1,47 @@
+HEAVYTSLA:
+   	Inherits: TSLA
+	-Buildable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Heavy-duty Tesla Coil
+	Health:
+		HP: 100000
+	Armament:
+		Weapon: HeavyTeslaZap
+		LocalOffset: 0,0,896
+	RevealsShroud:
+		MinRange: 11c0
+		Range: 11c0
+	AttackTesla:
+		PauseOnCondition: disabled || build-incomplete
+		ChargeAudio: tslachg2.aud
+		MaxCharges: 8
+		ReloadDelay: 260
+	Power:
+		Amount: 0
+
+HEAVYGAP:
+    Inherits: GAP
+	Capturable:
+		Types:
+		RequiresCondition: false
+	-Buildable:
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Heavy-duty Gapgen & Radar Jammer
+	Health:
+		HP: 150000
+	CreatesShroud:
+		Range: 6c0
+	Power:
+		Amount: 0
+	JamsMissiles:
+		Range: 10c0
+		DeflectionRelationships: Neutral, Enemy
+
+CREEPSNIPER:
+	Inherits: SNIPER
+	Armament:
+		Weapon: CreepSniper
