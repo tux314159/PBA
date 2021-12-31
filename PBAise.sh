@@ -4,7 +4,7 @@ rules="pba-balance-rules.yaml,pba-briefing-rules.yaml,bi-balance-rules.yaml,bi-l
 notifs="pba-notifications.yaml"
 seqs="bi-sequences.yaml,ERCC2-sequences.yaml" # SEX
 weaps="ragl-weapons.yaml,bi-weapons.yaml,pba-weapons-rules.yaml"
-others="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bot.shp,ref-top.shp,satellite_initialized_delay2s.aud"
+assets="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bot.shp,ref-top.shp,satellite_initialized_delay2s.aud"
 
 function updatething {
     sed -i.bkp "s/\($1:.*\)/\1,$2/g" $3
@@ -17,7 +17,7 @@ for d in *; do
 
     if [ ! -d $d ]; then continue; fi
     cp -R $d new
-    for f in $(sh -c "echo diffs/{$(echo $rules),$(echo $weaps),$(echo $notifs),$(echo $seqs),$(echo $others)}"); do
+    for f in $(sh -c "echo diffs/{$(echo $rules),$(echo $weaps),$(echo $notifs),$(echo $seqs),$(echo $assets)}"); do
         cp $f new/$d
     done
 
