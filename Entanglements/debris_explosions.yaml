@@ -1,0 +1,23 @@
+TnkrExplode:
+	Inherits: ^Explosion
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 5
+		ValidTargets: GroundActor, Trees
+		Versus:
+			None: 120
+			Wood: 100
+			Light: 50
+			Heavy: 20
+			Concrete: 10
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, Incendiary
+	Warhead@2Eff: CreateEffect
+		Explosions: napalm
+		ImpactSounds: firebl3.aud
+		Delay: 5
+	-Warhead@3EffWater:
+	Warhead@Smu: LeaveSmudge
+		SmudgeType: Scorch
+		Size: 4
+		Delay: 5

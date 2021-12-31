@@ -1,0 +1,30 @@
+^Palettes:
+	PaletteFromFile@player:
+		Name: player
+		Filename: ratemperat.pal
+		ShadowIndex: 4
+	PaletteFromFile@toxtree:
+		Name: toxtree
+		Filename: toxtree.pal
+		ShadowIndex: 4
+        
+    WeatherOverlay:
+        ParticleDensityFactor: 1
+        ChangingWindLevel: true
+        WindLevels: -5, -3, -2, 0, 2, 3, 5
+        WindTick: 150, 550
+        InstantWindChanges: false
+        UseSquares: false
+        PaticleSize: 0, 0
+        ScatterDirection: 0, 0
+        Gravity: 8.00, 12.00
+        SwingOffset: 0, 0
+        SwingSpeed: 0, 0
+        SwingAmplitude: 0, 0
+        ParticleColors: 719E00, 009611, 007709, 4F6B0B
+        LineTailAlphaValue: 150
+    GlobalLightingPaletteEffect:
+        Red: 0.95
+        Green: 1.00
+        Blue: 0.95
+        Ambient: 0.95

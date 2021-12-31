@@ -1,0 +1,356 @@
+#Structures
+dsdy:
+	idle: dsdy
+		Length: 16
+	scratched-idle:
+		Start: 32
+		Length: 16
+        
+hdg:
+	idle: hdg
+		Length: 16
+
+#Roads
+rd1a:
+	idle: rd1
+		Start: 0
+		ZOffset: -10000  
+
+rd1b:
+	idle: rd1
+		Start: 1
+		ZOffset: -10000  
+        
+rd1c:
+	idle: rd1
+		Start: 2
+		ZOffset: -10000  
+
+rd1d:
+	idle: rd1
+		Start: 3
+		ZOffset: -10000 
+        
+rd2a:
+	idle: rd2
+		Start: 0
+		ZOffset: -10000 
+		Offset: -12, 0
+        
+rd2b:
+	idle: rd2
+		Start: 1
+		ZOffset: -10000 
+		Offset: -12, 0
+
+        
+rd2c:
+	idle: rd2
+		Start: 2
+		ZOffset: -10000 
+		Offset: -12, 0
+        
+rd3a:
+	idle: rd3
+		Start: 0
+		ZOffset: -10000 
+		Offset: 0, -12
+        
+rd3b:
+	idle: rd3
+		Start: 1
+		ZOffset: -10000 
+		Offset: 0, -12
+        
+rd4:
+	idle: rd4
+		Start: 0
+		ZOffset: -10000 
+		Offset: 0, -12
+        
+#Stones
+stones1:
+	idle: stones
+		Start: 0
+		ZOffset: -10000
+        
+stones2:
+	idle: stones
+		Start: 1
+		ZOffset: -10000
+        
+stones3:
+	idle: stones
+		Start: 2
+		ZOffset: -10000
+        
+stones4:
+	idle: stones
+		Start: 3
+		ZOffset: -10000
+        
+stones11:
+	idle: stones1
+		Start: 0
+		ZOffset: -10000
+        
+stones12:
+	idle: stones1
+		Start: 1
+		ZOffset: -10000
+        
+stones13:
+	idle: stones1
+		Start: 2
+		ZOffset: -10000
+        
+stones14:
+	idle: stones1
+		Start: 3
+		ZOffset: -10000
+        
+fordact1:
+	idle: fordact
+		Start: 0
+		ZOffset: -10000
+        
+fordact2:
+	idle: fordact
+		Start: 1
+		ZOffset: -10000
+        
+rocks1:
+	idle: rocks
+		Start: 0
+		ZOffset: -10000
+        
+rocks2:
+	idle: rocks
+		Start: 1
+		ZOffset: -10000
+        
+rocks3:
+	idle: rocks
+		Start: 2
+		ZOffset: -10000
+        
+rocks4:
+	idle: rocks
+		Start: 3
+		ZOffset: -10000
+
+castle:
+	idle: castle
+        
+ruins1:
+	idle: ruins
+		Start: 0
+        
+ruins2:
+	idle: ruins
+		Start: 1
+        
+ruins3:
+	idle: ruins
+		Start: 2
+        
+ruins4:
+	idle: ruins
+		Start: 3
+        
+ruinssm1:
+	idle: ruinssm
+		Start: 0
+        
+ruinssm2:
+	idle: ruinssm
+		Start: 1
+        
+plcrash:
+	idle: plcrash
+		Start: 0
+		ZOffset: -10000
+        
+graves:
+	idle: graves
+		Start: 0
+		ZOffset: -10000
+        
+graves1:
+	idle: graves
+		Start: 1
+		ZOffset: -10000
+        
+graves2:
+	idle: graves
+		Start: 2
+		ZOffset: -10000
+        
+graves3:
+	idle: graves
+		Start: 3
+		ZOffset: -10000
+        
+graves4:
+	idle: graves
+		Start: 4
+		ZOffset: -10000
+        
+tilled:
+	idle: tilled
+		Start: 0
+		ZOffset: -10000
+        
+tilled1:
+	idle: tilled
+		Start: 1
+		ZOffset: -10000
+        
+tilled2:
+	idle: tilled
+		Start: 2
+		ZOffset: -10000
+
+tilled20:
+	idle: tilled2
+		Start: 0
+		ZOffset: -10000
+        
+tilled21:
+	idle: tilled2
+		Start: 1
+		ZOffset: -10000
+        
+heystack:
+	idle: heystack
+		Start: 0
+        
+heystack1:
+	idle: heystack
+		Start: 1
+        
+monastery:
+	idle:
+	damaged-idle:
+		Start: 1
+
+engh01:
+	idle: engh01
+	damaged-idle:
+		Start: 1
+        
+engh02:
+	idle: engh02
+	damaged-idle:
+		Start: 1
+        
+engh03:
+	idle: engh03
+	damaged-idle:
+		Start: 1
+        
+engch:
+	idle: engch
+	damaged-idle:
+		Start: 1
+        
+crch:
+	idle: crch
+	damaged-idle:
+		Start: 1
+        
+temsea:
+	idle: temsea
+		Start: 0
+		ZOffset: -10000
+        
+        
+#Trees
+
+stmp1:
+	idle: stmp
+		Start: 0
+        
+stmp2:
+	idle: stmp
+		Start: 1
+        
+stmp3:
+	idle: stmp
+		Start: 2
+
+cypr1:
+	idle: cypr
+		Start: 0
+    
+cypr1.husk:
+	idle: cypr
+		Start: 1
+        
+cypr2:
+	idle: cypr
+		Start: 2
+    
+cypr2.husk:
+	idle: cypr
+		Start: 3
+        
+tg1:
+	idle: tg
+		Start: 0
+		Offset: 13, -13
+        
+tg1.husk:
+	idle: tg
+		Start: 1
+		Offset: 13, -13
+        
+tg2:
+	idle: tg
+		Start: 2
+		Offset: 13, -13
+    
+tg2.husk:
+	idle: tg
+		Start: 3
+		Offset: 13, -13
+        
+tgc1:
+	idle: tgc
+		Start: 0
+        
+tgc1.husk:
+	idle: tgc
+		Start: 1
+        
+tgc2:
+	idle: tgc
+		Start: 2
+        
+tgc2.husk:
+	idle: tgc
+		Start: 3
+        
+tgb:
+	idle: tgb
+		Start: 0
+        
+tgb.husk:
+	idle: tgb
+		Start: 1
+        
+tgd:
+	idle: tgd
+		Start: 0
+        
+tgd.husk:
+	idle: tgd
+		Start: 1
+        
+tgd2:
+	idle: tgd
+		Start: 2
+        
+tgd2.husk:
+	idle: tgd
+		Start: 3

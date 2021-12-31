@@ -1,0 +1,591 @@
+T01r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T01.Husk
+
+T02r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T02.Husk
+
+T03r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T03.Husk
+
+T05r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T05.Husk
+
+T06r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T06.Husk
+
+T07r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T07.Husk
+
+T08r:
+	Inherits: ^RTree
+	Building:
+		Footprint: x_
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: T08.Husk
+
+T10r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T10.Husk
+
+T11r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T11.Husk
+
+T12r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T12.Husk
+
+T13r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T13.Husk
+
+T14r:
+	Inherits: ^RTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T14.Husk
+
+T15r:
+	Inherits: ^RTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T15.Husk
+
+T16r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T16.Husk
+
+T17r:
+	Inherits: ^RTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T17.Husk
+        
+T01o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T01.Husk
+
+T02o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T02.Husk
+
+T03o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T03.Husk
+
+T05o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T05.Husk
+
+T06o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T06.Husk
+
+T07o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T07.Husk
+
+T08o:
+	Inherits: ^OTree
+	Building:
+		Footprint: x_
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: T08.Husk
+
+T10o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T10.Husk
+
+T11o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T11.Husk
+
+T12o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T12.Husk
+
+T13o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T13.Husk
+
+T14o:
+	Inherits: ^OTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T14.Husk
+
+T15o:
+	Inherits: ^OTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T15.Husk
+
+T16o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T16.Husk
+
+T17o:
+	Inherits: ^OTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T17.Husk
+        
+T01p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T01.Husk
+
+T02p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T02.Husk
+
+T03p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T03.Husk
+
+T05p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T05.Husk
+
+T06p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T06.Husk
+
+T07p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T07.Husk
+
+T08p:
+	Inherits: ^PTree
+	Building:
+		Footprint: x_
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: T08.Husk
+
+T10p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T10.Husk
+
+T11p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T11.Husk
+
+T12p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T12.Husk
+
+T13p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T13.Husk
+
+T14p:
+	Inherits: ^PTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T14.Husk
+
+T15p:
+	Inherits: ^PTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T15.Husk
+
+T16p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T16.Husk
+
+T17p:
+	Inherits: ^PTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T17.Husk
+        
+T01y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T01.Husk
+
+T02y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T02.Husk
+
+T03y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T03.Husk
+
+T05y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T05.Husk
+
+T06y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T06.Husk
+
+T07y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T07.Husk
+
+T08y:
+	Inherits: ^YTree
+	Building:
+		Footprint: x_
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: T08.Husk
+
+T10y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T10.Husk
+
+T11y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ xx
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T11.Husk
+
+T12y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T12.Husk
+
+T13y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T13.Husk
+
+T14y:
+	Inherits: ^YTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T14.Husk
+
+T15y:
+	Inherits: ^YTree
+	Building:
+		Footprint: ___ xx_
+		Dimensions: 3,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T15.Husk
+
+T16y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T16.Husk
+
+T17y:
+	Inherits: ^YTree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	SpawnActorOnDeath:
+		Actor: T17.Husk
