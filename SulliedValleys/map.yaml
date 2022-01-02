@@ -180,9 +180,6 @@ Actors:
 	Actor51: mine
 		Owner: Neutral
 		Location: 58,77
-	Actor53: v14
-		Owner: Neutral
-		Location: 51,51
 	Actor54: t10.husk
 		Owner: Neutral
 		Location: 45,51
