@@ -1,7 +1,7 @@
 .PHONY : all
 
 all :
-	@rm -rf new sub sub.zip
-	@mkdir new sub
+	@rm -rf new PBAmaps PBAmaps.zip
+	@mkdir new PBAmaps
 	@./PBAise.sh
-	@rm -rf new sub
+	@rm -rf new

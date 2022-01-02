@@ -12,7 +12,7 @@ function updatething {
 }
 
 for d in *; do
-    [ $d == new ] || [ $d == sub ] || [ $d == diffs ] && continue
+    [ $d == new ] || [ $d == PBAmaps ] || [ $d == diffs ] && continue
     mapfile=new/$d/map.yaml
 
     if [ ! -d $d ]; then continue; fi
@@ -34,6 +34,6 @@ for d in *; do
     (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)
 done
 
-mv new/*.oramap sub
+mv new/*.oramap PBAmaps
 
-zip -r sub.zip sub >/dev/null
+zip -r PBAmaps.zip PBAmaps >/dev/null
