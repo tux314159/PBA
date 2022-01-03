@@ -11,12 +11,13 @@ function updatething {
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
 
-for d in *; do
-    [ $d == new ] || [ $d == PBAmaps ] || [ $d == diffs ] && continue
+for oram in old/*.oramap; do
+    d=$(basename $oram .oramap)
+    mkdir old/$d; mv $oram old/$d; (cd old/$d; unzip $d.oramap; rm $d.oramap)
+
     mapfile=new/$d/map.yaml
 
-    if [ ! -d $d ]; then continue; fi
-    cp -R $d new
+    cp -R old/$d new
     for f in $(sh -c "echo diffs/{$(echo $rules),$(echo $weaps),$(echo $notifs),$(echo $seqs),$(echo $assets)}"); do
         cp $f new/$d
     done

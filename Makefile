@@ -2,6 +2,7 @@
 
 all :
 	@rm -rf new PBAmaps PBAmaps.zip
-	@mkdir new PBAmaps
+	@mkdir old new PBAmaps
+	@./pull-ids.sh
 	@./PBAise.sh
-	@rm -rf new
+	@rm -rf old new

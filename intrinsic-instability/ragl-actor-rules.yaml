@@ -1,6 +1,0 @@
-#Any use or modification of the following actor as to be authorised by Eloyros
-
-tox_sign:
-	Inherits: ^CivField
-	Tooltip:
-		Name: RAGL Season X
