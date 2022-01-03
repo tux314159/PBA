@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /bin/sh
 
 rules="pba-balance-rules.yaml,pba-briefing-rules.yaml,bi-balance-rules.yaml,bi-lobby-rules.yaml,bi-player-rules.yaml,ERCC21andBCC-rules.yaml"
 notifs="pba-notifications.yaml"
