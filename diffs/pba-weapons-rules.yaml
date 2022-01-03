@@ -5,6 +5,8 @@ FireballLauncher:
 	ReloadDelay: 75 #65
 	BurstDelays: 25 #20
 
-Flamer:
-	Projectile: Bullet
-		Speed: 250 #170
+PortaTesla:
+	ReloadDelay: 60 #70
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			Heavy: 50 #60

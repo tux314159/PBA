@@ -26,26 +26,16 @@ MGG:
 	Valued:
 		Cost: 800 #1000
 
-CTNK:
-	Buildable:
-		Prerequisites: atek, ~vehicles.allies, ~techlevel.high #atek, ~vehicles.germany, ~techlevel.high
-
-E4:
-	Valued:
-		Cost: 250 #300
-	Health:
-		HP: 5000 #4000
-	RevealsShroud:
-		Range: 5c0 #4c0
-	Buildable:
-		Prerequisites: ~barr, dome, ~infantry.ukraine, ~techlevel.medium #~barr, ftur, ~techlevel.low
-
 SHOK:
 	Valued:
-		Cost: 400 #350
+		Cost: 300 #350
 	Buildable:
 		BuildPaletteOrder: 75 #130
 		Prerequisites: ~barr, dome, ~infantry.russia, ~techlevel.medium #~barr, stek, tsla, ~infantry.russia, ~techlevel.high
+
+MRJ:
+	Buildable:
+		Prerequisites: atek, ~vehicles.france, ~techlevel.high #atek, ~vehicles.allies, ~techlevel.high
 
 SPY:
 	Buildable:
@@ -53,55 +43,9 @@ SPY:
 
 -SPY.England:
 
-DOME:
+HPAD:
 	SupportPowerChargeBar:
-	AirstrikePower@spyplane:
-		PauseOnCondition: disabled
-		OrderName: SovietSpyPlane
-		Prerequisites: aircraft.soviet
-		Icon: spyplane
-		ChargeInterval: 3750
-		Description: Spy Plane
-		LongDesc: Reveals an area of the map.
-		SelectTargetSpeechNotification: SelectTarget
-		EndChargeSpeechNotification: SpyPlaneReady
-		CameraActor: camera.spyplane
-		CameraRemoveDelay: 150
-		UnitType: u2
-		QuantizedFacings: 8
-		DisplayBeacon: true
-		BeaconPoster: camicon
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		UseDirectionalTarget: True
-		DirectionArrowAnimation: paradirection
-		SupportPowerPaletteOrder: 60
-	AirstrikePower@parabombs:
-		PauseOnCondition: disabled
-		OrderName: FranceParabombs
-		Prerequisites: aircraft.france
-		Icon: parabombs
-		ChargeInterval: 6000
-		Description: Parabombs
-		LongDesc: A squad of Badgers drop parachuted\nbombs on your target.
-		SelectTargetSpeechNotification: SelectTarget
-		CameraActor: camera
-		CameraRemoveDelay: 150
-		UnitType: badr.bomber
-		QuantizedFacings: 8
-		DisplayBeacon: true
-		BeaconPoster: pbmbicon
-		SquadSize: 1
-		SquadOffset: 1792,1792,0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		UseDirectionalTarget: True
-		DirectionArrowAnimation: paradirection
-		SupportPowerPaletteOrder: 40
 	ParatroopersPower@paradrop:
-		PauseOnCondition: disabled
 		OrderName: GermanyParaDrop
 		Prerequisites: aircraft.germany
 		Icon: paratroopers
@@ -122,52 +66,10 @@ DOME:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: paradirection
 		SupportPowerPaletteOrder: 50
-	ProvidesPrerequisite@england:
-		Factions: england
-		Prerequisite: aircraft.england
-	ProvidesPrerequisite@france:
-		Factions: france
-		Prerequisite: aircraft.france
-	ProvidesPrerequisite@germany:
-		Factions: germany
-		Prerequisite: aircraft.germany
-	ProvidesPrerequisite@englishstructure:
-		RequiresPrerequisites: structures.england
-		Prerequisite: aircraft.england
-	ProvidesPrerequisite@frenchstructure:
-		RequiresPrerequisites: structures.france
-		Prerequisite: aircraft.france
-	ProvidesPrerequisite@germanstructure:
-		RequiresPrerequisites: structures.germany
-		Prerequisite: aircraft.germany
-	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
-		Prerequisite: aircraft.soviet
-	ProvidesPrerequisite@sovietstructure:
-		RequiresPrerequisites: structures.soviet
-		Prerequisite: aircraft.soviet
 
 2TNK:
 	AttackTurreted:
 		PauseOnCondition: parachute
-
-AFLD:
-	Buildable:
-		Prerequisites: dome, ~structures.soviet, ~techlevel.medium, #dome, ~structures.soviet, ~techlevel.medium, ~!structures.ukraine
-	-AirstrikePower@spyplane:
-	-AirstrikePower@parabombs:
-	ParatroopersPower@paratroopers:
-		ChargeInterval: 6000 #7500
-
--AFLD.Ukraine:
-
-MIG:
-	Rearmable:
-		RearmActors: afld #afld, afld.ukraine
-
-YAK:
-	Rearmable:
-		RearmActors: afld #afld, afld.ukraine
 
 PDOX:
 	ChronoshiftPower@chronoshift:
