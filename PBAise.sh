@@ -11,7 +11,7 @@ function updatething {
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
 
-for oram in old/*.oramap; do
+for oram in old/*.oramap manual/*; do
     d=$(basename $oram .oramap)
 
     if [ ! -d old/$d ]; then
