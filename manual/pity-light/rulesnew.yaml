@@ -1,0 +1,217 @@
+MONE.M:
+	Inherits: ^Crate
+	Interactable:
+		Bounds: 100,100
+	-HiddenUnderFog:
+	AlwaysVisible:
+	Tooltip:
+		Name: Bain Crate 4000$ 
+	GiveCashCrateAction:
+		Amount: 4000
+		SelectionShares: 1
+		UseCashTick: true
+	RenderSprites:
+		Image: baincrate
+        Scale: 10
+
+MONEv:
+	Inherits: MONEYCRATE
+	-HiddenUnderFog:
+	AlwaysVisible:
+
+Firenew:
+	Inherits: FLARE
+	RenderSprites:
+		Image: firene
+	Tooltip:
+		Name: Fire
+
+COME1:
+	Inherits: FLARE
+	RenderSprites:
+		Image: playerflare
+		Palette: cloak
+		IsPlayerPalette: True
+	-RevealsShroud:
+	-HiddenUnderFog:
+	AlwaysVisible:
+	Tooltip:
+		Name: playerflare
+
+emdark:
+	Inherits: FLARE
+	RenderSprites:
+		Image: emu222
+	Tooltip:
+		Name: Come with me (golden ratio)
+
+iro22:
+	Inherits: FLARE
+	RenderSprites:
+		Image: iro2
+	Tooltip:
+		Name: Red thing..
+
+pummy:
+	Inherits: FLARE
+	RenderSprites:
+		Image: pum2
+	Tooltip:
+		Name: Pumpkin
+
+neweart:
+	Inherits: FLARE
+	RenderSprites:
+		Image: ear2
+		Scale: 0.7
+	Tooltip:
+		Name: Live long and prosper
+
+greenthing:
+	Inherits: FLARE
+	RenderSprites:
+		Image: greenthi
+	Tooltip:
+		Name: Green thing
+
+stars:
+	Inherits: FLARE
+	RenderSprites:
+		Image: stars1
+	Tooltip:
+		Name: Twinkle, twinkle, little star
+
+stars2:
+	Inherits: FLARE
+	RenderSprites:
+		Image: stars2
+	Tooltip:
+		Name: How I wonder what you are
+
+star3:
+	Inherits: FLARE
+	RenderSprites:
+		Image: stars3
+	Tooltip:
+		Name: Up above the world so high
+
+star4:
+	Inherits: FLARE
+	RenderSprites:
+		Image: stars4
+	Tooltip:
+		Name: hello
+
+star5:
+	Inherits: FLARE
+	RenderSprites:
+		Image: stars5
+		Scale: 0.5
+	Tooltip:
+		Name: phone your mom
+
+lighti:
+	Inherits: FLARE
+	RenderSprites:
+		Image: litning
+	Tooltip:
+		Name: ZzZzzz
+
+lcrhti:
+	Inherits: FLARE
+	RenderSprites:
+		Image: hole
+	Tooltip:
+		Name: ZzZ3
+
+lighti:
+	Inherits: SPEN
+	-Targetable:
+	-Buildable:
+	Tooltip:
+		Name: Flooded Sub Pen
+	Building:
+		Footprint: XXX xxx XXX
+		Dimensions: 3,3
+		TerrainTypes: Water
+	RenderSprites:
+		Image: nSPEN
+	Valued:
+		Cost: 0
+
+navaldflod:
+	Inherits: SPEN
+	-Targetable:
+	-Buildable:
+	Tooltip:
+		Name: Flooded Naval Yard
+	Building:
+		Footprint: XXX xxx XXX
+		Dimensions: 3,3
+		TerrainTypes: Water
+	RenderSprites:
+		Image: nsyrd
+	Valued:
+		Cost: 0
+
+redya:
+	Inherits: Ant
+	RenderSprites:
+		Image: ant
+		Palette: invuln
+	Tooltip:
+		Name: red ant
+
+starpo:
+	Inherits: ^ScienceBuilding
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: portal
+	Tooltip:
+		Name: Golden Ratio Star Portal (broken chronosphere)
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 1000000
+	Armor:
+		Type: Wood
+
+starpoto:
+	Inherits: FLARE
+	RenderSprites:
+		Image: tportal
+	-Tooltip:
+
+starpearl:
+	Inherits: FLARE
+	RenderSprites:
+		Image: pearlstar
+	Tooltip:
+		Name: Pearl moon
+
+liti2:
+	Inherits: FLARE
+	RenderSprites:
+		Image: liti
+	-Tooltip:
+
+redpo:
+	Inherits: ^ScienceBuilding
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: redport
+	Tooltip:
+		Name: testset
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 1000000
+	Armor:
+		Type: Wood
+
+CTFLAG:
+	WithColoredOverlay:
+		Palette: invuln
+
