@@ -1,0 +1,40 @@
+[
+    {
+        "id": 45157,
+        "title": "Sullied Valleys",
+        "description": "",
+        "info": "Dried up valleys where continuous fighting occurs, sullying the land with the blood of foes.\r\n\r\n- Increased spawn ore from revision 2.",
+        "author": "mo",
+        "map_type": "",
+        "players": 2,
+        "game_mod": "ra",
+        "map_hash": "8fe84ad4cce05bae5c02d1f447313dd553381e04",
+        "width": "103",
+        "height": "103",
+        "bounds": "1,1,101,101",
+        "spawnpoints": "26,26, 76,76",
+        "tileset": "TEMPERAT",
+        "revision": 3,
+        "last_revision": true,
+        "requires_upgrade": false,
+        "advanced_map": false,
+        "lua": false,
+        "posted": "2022-01-01 23:08:07.379121+00:00",
+        "viewed": 26,
+        "downloaded": 22,
+        "rating": 0.0,
+        "license": "Creative Commons Attribution-ShareAlike 4.0 International",
+        "minimap": "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",
+        "url": "http://resource.openra.net/maps/45157/oramap",
+        "downloading": true,
+        "mapformat": 11,
+        "parser": "release-20210321",
+        "map_grid_type": "Rectangular",
+        "categories": [
+            "Conquest"
+        ],
+        "rules": "UnVsZXM6ClNlcXVlbmNlczoKTW9kZWxTZXF1ZW5jZXM6CldlYXBvbnM6ClZvaWNlczoKTXVzaWM6Ck5vdGlmaWNhdGlvbnM6",
+        "players_block": "UGxheWVyUmVmZXJlbmNlQE5ldXRyYWw6CglOYW1lOiBOZXV0cmFsCglPd25zV29ybGQ6IFRydWUKCU5vbkNvbWJhdGFudDogVHJ1ZQoJRmFjdGlvbjogZW5nbGFuZApQbGF5ZXJSZWZlcmVuY2VAQ3JlZXBzOgoJTmFtZTogQ3JlZXBzCglOb25Db21iYXRhbnQ6IFRydWUKCUZhY3Rpb246IGVuZ2xhbmQKCUVuZW1pZXM6IE11bHRpMCwgTXVsdGkxClBsYXllclJlZmVyZW5jZUBNdWx0aTA6CglOYW1lOiBNdWx0aTAKCVBsYXlhYmxlOiBUcnVlCglGYWN0aW9uOiBSYW5kb20KCUVuZW1pZXM6IENyZWVwcwpQbGF5ZXJSZWZlcmVuY2VATXVsdGkxOgoJTmFtZTogTXVsdGkxCglQbGF5YWJsZTogVHJ1ZQoJRmFjdGlvbjogUmFuZG9tCglFbmVtaWVzOiBDcmVlcHMK",
+        "reports": 0
+    }
+]

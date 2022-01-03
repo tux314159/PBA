@@ -13,7 +13,12 @@ function updatething {
 
 for oram in old/*.oramap; do
     d=$(basename $oram .oramap)
-    mkdir old/$d; mv $oram old/$d; (cd old/$d; unzip $d.oramap; rm $d.oramap)
+
+    if [ ! -d old/$d ]; then
+        mkdir old/$d;
+        cp $oram old/$d;
+        (cd old/$d; unzip $d.oramap >/dev/null)
+    fi
 
     mapfile=new/$d/map.yaml
 
