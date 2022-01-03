@@ -11,18 +11,25 @@ function updatething {
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
 
-for oram in old/*.oramap; do
+for oram in .mapcache/*.oramap; do
     d=$(basename $oram .oramap)
 
-    if [ ! -d old/$d ]; then
-        mkdir old/$d;
-        cp $oram old/$d;
-        (cd old/$d; unzip $d.oramap >/dev/null)
-    fi
+    rm -rf .mapcache/$d
+    mkdir .mapcache/$d
+    cp $oram .mapcache/$d
+    (cd .mapcache/$d; unzip $d.oramap >/dev/null)
+    mv .mapcache/$d proc
+done
 
+for d in manual/*; do
+    cp -R $d proc >/dev/null 2>&1
+done
+
+for dd in proc/*; do
+    d=$(basename $dd)
     mapfile=new/$d/map.yaml
 
-    cp -R old/$d new
+    cp -R $dd new
     for f in $(sh -c "echo diffs/{$(echo $rules),$(echo $weaps),$(echo $notifs),$(echo $seqs),$(echo $assets)}"); do
         cp $f new/$d
     done
