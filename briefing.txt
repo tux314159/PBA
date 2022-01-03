@@ -6,6 +6,7 @@ Allies in general
  • Adv. Chronosphere will be shared between all allied subfactions
  • Chrono Tank will be shared between all allied subfactions
  • Camo Pillbox will be removed for all allied subfactions except England
+ • MRJ will be removed for other allied subfactions except France
 
 England
  • Phase Transport will be replacing British Spy
@@ -15,23 +16,19 @@ England
     ° England becomes unable to build regular Pillbox
 
 France
- • Parabombs will be replacing Phase Transport
-    ° Parabombs will be moved from Ukraine Airfield to France Radar Dome
+ • MRJ will be replacing Phase Transport
+    ° MRJ will be removed for other allied subfactions
  • Fake buildings will remain the same
 
 Germany
  • Tank Drop will be replacing Adv. Chronosphere
     ° Germany gains a support power on Radar Dome that drops 2 medium tanks at a desired location via Badger
+    ° It can be used every 4 minutes
  • Mobile Gap Generator will be replacing Chrono Tank
     ° Mobile Gap Generator will be moved from England to Germany
 
-Soviets in general
- • Flamethrower (infantry) will no longer be producible for Russia
-
 Ukraine
- • Flamethrowers will be replacing Parabombs
-    ° Flamethrowers will be moved to Ukraine Radar Dome
-    ° Flamethrowers will no longer require Flame Tower
+ • Parabombs will remain the same
  • Demo trucks will remain the same
 
 Russia
@@ -58,20 +55,10 @@ Flame Tower
  • Reload delay from 65 to 75
  • Burst delay from 20 to 25
 
-Flamer
- • Cost from $300 to $250
- • Health from 4000 to 5000
- • Vision range from 4 to 5 cells
- • Projectile speed from 170 to 250
-
-Paratroopers
- • Timer from 5 minutes to 4
-
-Parabomb
- • Timer from 5 minutes to 4
-
 Shock Trooper
- • Cost from $350 to $400
+ • Cost from $350 to $300
+ • Reload delay from 70 to 60
+ • Damage vs heavy armour from 60% to 50%
 
  Spy Plane
  • Moved to radar dome
