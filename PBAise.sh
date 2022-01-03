@@ -45,7 +45,7 @@ for dd in proc/*; do
     perl -pi -e "s/(Categories:.*)/Categories: PBA/g" $mapfile
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
-    composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png ho.png
+    composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png
 
     (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)
 done
