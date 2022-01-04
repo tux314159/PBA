@@ -9,3 +9,6 @@ all :
 	@./pull-maps.sh
 	@./PBAise.sh
 	@rm -rf new proc .imgregen
+
+clean :
+	@rm -rf .idcache proc .imgregen PBAmaps PBAmaps.zip .mapcache
