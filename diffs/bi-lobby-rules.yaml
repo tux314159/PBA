@@ -4,7 +4,6 @@ World:
 		TechLevel: unrestricted
 		ShortGameCheckboxEnabled: true
 		ShortGameCheckboxLocked: true
-		GameSpeedDropdownLocked: true
 		GameSpeed: default
 	CrateSpawner:
 		CheckboxEnabled: false
@@ -17,9 +16,6 @@ World:
 	SpawnMPUnits:
 		DropdownLocked: true
 		StartingUnitsClass: none
-	MPStartLocations:
-		SeparateTeamSpawnsCheckboxEnabled: false
-		SeparateTeamSpawnsCheckboxLocked: true
 	TimeLimitManager:
 		TimeLimitLocked: True
 
@@ -31,10 +27,8 @@ Player:
 		FogCheckboxEnabled: true
 	LobbyPrerequisiteCheckbox@GLOBALBOUNTY:
 		Enabled: true
-		Locked: false
 	LobbyPrerequisiteCheckbox@REUSABLEENGINEERS:
 		Enabled: true
-		Locked: false
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		Enabled: true
 		Locked: true
