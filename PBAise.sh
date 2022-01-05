@@ -37,9 +37,8 @@ for dd in proc/*; do
         cp $f new/$d
     done
 
-    (cd new/$d; find -name '*.yaml' -exec dos2unix {} \; 2>/dev/null)
-
     printf "Updating YAMLs for $d..."
+    find new/$d -name '*.yaml' -exec dos2unix {} \; 2>/dev/null
     updatething "Rules" $rules $mapfile
     updatething "Weapons" $weaps $mapfile
     updatething "Notifications" $notifs $mapfile

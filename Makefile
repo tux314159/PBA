@@ -13,5 +13,3 @@ all :
 
 clean :
 	@rm -rf .idcache proc .imgregen PBAmaps PBAmaps.zip .mapcache
-
-

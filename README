@@ -1,1 +1,1 @@
-you need a POSIX environment, jq, zip+unzip, cURL, and imagemagick to run this
+you need a POSIX environment, jq, zip+unzip, cURL, dos2unix and imagemagick to run this
