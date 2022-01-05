@@ -27,6 +27,7 @@ done
 
 prevgen="true"
 zipmaps="true"
+cs="\x1b[2K\x1b[1G"
 
 for dd in proc/*; do
     d=$(basename $dd)
@@ -37,7 +38,7 @@ for dd in proc/*; do
         cp $f new/$d
     done
 
-    printf "Updating YAMLs for $d..."
+    printf "$cs""Updating YAMLs... (processing $d)"
     find new/$d -name '*.yaml' -exec dos2unix {} \; 2>/dev/null
     updatething "Rules" $rules $mapfile
     updatething "Weapons" $weaps $mapfile
@@ -47,18 +48,21 @@ for dd in proc/*; do
 
     perl -pi -e "s/(Title: .*?) *(\[.*\])? *$/\1 [PBA]/g" $mapfile
     perl -pi -e "s/(Categories:.*)/Categories: PBA/g" $mapfile
-    printf " done.\n"
 
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
     # so we can present it more nicely later :p
-    prevgen="$prevgen; printf \"Compositing map preview for $d...\"; composite pbaoverlay.png -gravity center -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png; printf \" done.\n\""
+    prevgen="$prevgen; printf \"$cs\"\"Compositing map previews... (processing $d)\"; composite pbaoverlay.png -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
 
     # because imagegen was lazy so must this be
-    zipmaps="$zipmaps; printf \"Zipping map $d...\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null); printf \" done.\n\""
+    zipmaps="$zipmaps; printf \"$cs\"\"Zipping maps... (processing $d)\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)"
 done
+printf "$cs""Updating YAMLs... done.\n"
+
 sh -c "$prevgen"  # actually generate map previews now
+printf "$cs""Compositing map previews... done.\n"
 sh -c "$zipmaps"  # actually zip maps
+printf "$cs""Zipping maps... done.\n"
 
 mv new/*.oramap PBAmaps
 
