@@ -52,8 +52,7 @@ for dd in proc/*; do
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
     # so we can present it more nicely later :p
-    prevgen="$prevgen; printf \"Compositing map preview for $d...\"; composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png; printf \" done.\n\""
-    composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png
+    prevgen="$prevgen; printf \"Compositing map preview for $d...\"; composite pbaoverlay.png -gravity center -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png; printf \" done.\n\""
 
     # because imagegen was lazy so must this be
     zipmaps="$zipmaps; printf \"Zipping map $d...\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null); printf \" done.\n\""
