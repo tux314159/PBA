@@ -25,6 +25,9 @@ for d in manual/*; do
     cp -R $d proc >/dev/null 2>&1
 done
 
+prevgen="true"
+zipmaps="true"
+
 for dd in proc/*; do
     d=$(basename $dd)
     mapfile=new/$d/map.yaml
@@ -49,12 +52,15 @@ for dd in proc/*; do
 
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
-    printf "Compositing map preview for $d..."
+    # so we can present it more nicely later :p
+    prevgen="$prevgen; printf \"Compositing map preview for $d...\"; composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png; printf \" done.\n\""
     composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png
-    printf " done.\n"
 
-    (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)
+    # because imagegen was lazy so must this be
+    zipmaps="$zipmaps; printf \"Zipping map $d...\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null); printf \" done.\n\""
 done
+sh -c "$prevgen"  # actually generate map previews now
+sh -c "$zipmaps"  # actually zip maps
 
 mv new/*.oramap PBAmaps
 
