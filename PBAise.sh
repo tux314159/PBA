@@ -35,6 +35,8 @@ for dd in proc/*; do
     done
 
     (cd new/$d; find -name '*.yaml' -exec dos2unix {} \; 2>/dev/null)
+
+    printf "Updating YAMLs for $d..."
     updatething "Rules" $rules $mapfile
     updatething "Weapons" $weaps $mapfile
     updatething "Notifications" $notifs $mapfile
@@ -43,9 +45,13 @@ for dd in proc/*; do
 
     perl -pi -e "s/(Title: .*?) *(\[.*\])? *$/\1 [PBA]/g" $mapfile
     perl -pi -e "s/(Categories:.*)/Categories: PBA/g" $mapfile
+    printf " done.\n"
+
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
+    printf "Compositing map preview for $d..."
     composite pbaoverlay.png -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png
+    printf " done.\n"
 
     (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)
 done

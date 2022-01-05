@@ -1,4 +1,4 @@
-.PHONY : all
+.PHONY : all clean
 
 all :
 	@touch .imgregen
@@ -9,6 +9,9 @@ all :
 	@./pull-maps.sh
 	@./PBAise.sh
 	@rm -rf new proc .imgregen
+	@echo "Done."
 
 clean :
 	@rm -rf .idcache proc .imgregen PBAmaps PBAmaps.zip .mapcache
+
+
