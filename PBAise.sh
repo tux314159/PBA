@@ -19,6 +19,7 @@ for oram in .mapcache/*.oramap; do
     cp $oram .mapcache/$d
     (cd .mapcache/$d; unzip $d.oramap >/dev/null)
     mv .mapcache/$d proc
+    rm proc/$d/*.oramap
 done
 
 for d in manual/*; do
@@ -61,7 +62,7 @@ for dd in proc/*; do
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
     # so we can present it more nicely later :p
-    imggen="$imggen; printf \"$cs\"\"Compositing map previews... (processing $d)\"; if [ \"$(grep "^$d$" .imgregen)\" ]; then (cd new/$d; zip -rq ../../proc/t.zip *); $orautil ra --refresh-map $(pwd)/proc/t.zip; rm -r new/$d; mkdir new/$d; (cd new/$d; unzip -q ../../proc/t.zip); rm proc/t.zip; fi; composite pbaoverlay.png -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
+    imggen="$imggen; printf \"$cs\"\"Compositing map previews... (processing $d)\"; if [ \"$(grep "^$d$" .imgregen)\" ]; then (cd new/$d; zip -rq ../../proc/t.oramap *); $orautil ra --refresh-map $(pwd)/proc/t.oramap; rm -r new/$d; mkdir new/$d; (cd new/$d; unzip -q ../../proc/t.oramap); rm proc/t.oramap; fi; composite pbaoverlay.png -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
 
     # because imagegen was lazy so must this be
     zipmaps="$zipmaps; printf \"$cs\"\"Zipping maps... (processing $d)\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)"
