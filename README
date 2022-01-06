@@ -1,1 +1,3 @@
 you need a POSIX environment, jq, zip+unzip, cURL, dos2unix and imagemagick to run this
+you can delete a line from .mapcache to redownload the map.
+do NOT under any circumstances modify .namecache.

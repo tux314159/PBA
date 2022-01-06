@@ -1,8 +1,7 @@
 .PHONY : all clean
 
 all :
-	@touch .imgregen
-	@touch .idcache
+	@touch .imgregen .idcache .namecache
 	@rm -rf new proc PBAmaps PBAmaps.zip
 	@mkdir -p .mapcache new PBAmaps proc
 	@./gen-briefing.sh
@@ -12,4 +11,4 @@ all :
 	@echo "Done."
 
 clean :
-	@rm -rf .idcache proc .imgregen PBAmaps PBAmaps.zip .mapcache
+	@rm -rf .idcache proc .imgregen PBAmaps PBAmaps.zip .mapcache .namecache

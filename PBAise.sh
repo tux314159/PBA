@@ -6,7 +6,7 @@ seqs="bi-sequences.yaml,ERCC2-sequences.yaml" # SEX
 weaps="ragl-weapons.yaml,bi-weapons.yaml,pba-weapons-rules.yaml"
 assets="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bot.shp,ref-top.shp,satellite_initialized_delay2s.aud"
 
-function updatething {
+updatething() {
     perl -pi -e "s/($1:.*)/\1,$2/g" $3
     grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
 }
@@ -25,9 +25,18 @@ for d in manual/*; do
     cp -R $d proc >/dev/null 2>&1
 done
 
-prevgen="true"
+imggen="true"
 zipmaps="true"
 cs="\x1b[2K\x1b[1G"
+if [ -z "$orautil" ]; then
+    if [ $(uname) = "Darwin" ]; then
+        orautil="/Applications/OpenRA - Red Alert.app/Contents/Resources/OpenRA.Utility.exe"
+    elif [ $(uname) = "Linux" ]; then
+        orautil="/usr/lib/openra/OpenRA.Utility.exe"
+    else
+        echo "ERROR: OpenRA.Utility.exe not found. Please run the script again, manually setting the variable orautil to point to the location of OpenRA.Utility."
+    fi
+fi
 
 for dd in proc/*; do
     d=$(basename $dd)
@@ -52,16 +61,16 @@ for dd in proc/*; do
     grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
 
     # so we can present it more nicely later :p
-    prevgen="$prevgen; printf \"$cs\"\"Compositing map previews... (processing $d)\"; composite pbaoverlay.png -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
+    imggen="$imggen; printf \"$cs\"\"Compositing map previews... (processing $d)\"; if [ \"$(grep "^$d$" .imgregen)\" ]; then (cd new/$d; zip -rq ../../proc/t.zip *); $orautil ra --refresh-map $(pwd)/proc/t.zip; rm -r new/$d; mkdir new/$d; (cd new/$d; unzip -q ../../proc/t.zip); rm proc/t.zip; fi; composite pbaoverlay.png -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
 
     # because imagegen was lazy so must this be
     zipmaps="$zipmaps; printf \"$cs\"\"Zipping maps... (processing $d)\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)"
 done
 printf "$cs""Updating YAMLs... done.\n"
 
-sh -c "$prevgen"  # actually generate map previews now
+sh -c "$imggen"  # actually generate map previews now
 printf "$cs""Compositing map previews... done.\n"
-sh -c "$zipmaps"  # actually zip maps
+sh -c "$zipmaps"  # actually zip maps now
 printf "$cs""Zipping maps... done.\n"
 
 mv new/*.oramap PBAmaps
