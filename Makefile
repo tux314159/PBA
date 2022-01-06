@@ -8,7 +8,7 @@ all :
 	@./pull-maps.sh
 	@./PBAise.sh
 	@rm -rf new proc .imgregen
-	@echo "Done."
+	@echo "PBAised $$(ls -1 PBAmaps | wc -l) maps!"
 
 clean :
 	@rm -rf .idcache proc .imgregen PBAmaps PBAmaps.zip .mapcache .namecache
