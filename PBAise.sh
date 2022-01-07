@@ -31,7 +31,7 @@ zipmaps="true"
 cs="\x1b[2K\x1b[1G"
 if [ -z "$orautil" ]; then
     if [ $(uname) = "Darwin" ]; then
-        orautil="/Applications/OpenRA - Red Alert.app/Contents/Resources/OpenRA.Utility.exe"
+        orautil="'/Applications/OpenRA - Red Alert.app/Contents/Resources/OpenRA.Utility.exe'"
     elif [ $(uname) = "Linux" ]; then
         orautil="/usr/lib/openra/OpenRA.Utility.exe"
     else
