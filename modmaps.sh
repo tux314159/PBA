@@ -1,15 +1,20 @@
 #! /bin/sh
 
-rules="pba-balance-rules.yaml,pba-briefing-rules.yaml,bi-balance-rules.yaml,bi-lobby-rules.yaml,bi-player-rules.yaml,ERCC21andBCC-rules.yaml"
-notifs="pba-notifications.yaml"
-seqs="bi-sequences.yaml,ERCC2-sequences.yaml" # SEX
-weaps="ragl-weapons.yaml,bi-weapons.yaml,pba-weapons-rules.yaml"
-assets="harv-flipped_top.shp,pip-skull.shp,ragl-weapons.yaml,ref-anim.shp,ref-bot.shp,ref-top.shp,satellite_initialized_delay2s.aud"
+. ./config.sh
 
 updatething() {
-    perl -pi -e "s/($1:.*)/\1,$2/g" $3
-    grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
+    # adds stuff to a line in a yaml
+    if [ $2 ]; then
+        perl -pi -e "s/($1:.*)/\1,$2/g" $3
+        # in case it didn't even exist in the first place
+        grep -q "$1:" $3 || printf "\n$1: $2\n" >> $3
+    fi
 }
+
+for d in manual/*; do
+    # if it's not a directory it's a zip
+    [ "$(file -b $d)" = "directory" ] || cp -R $d .mapcache >/dev/null 2>&1
+done
 
 for oram in .mapcache/*.oramap; do
     d=$(basename $oram .oramap)
@@ -23,7 +28,7 @@ for oram in .mapcache/*.oramap; do
 done
 
 for d in manual/*; do
-    cp -R $d proc >/dev/null 2>&1
+    [ "$(file -b $d)" = "directory" ] && cp -R $d proc >/dev/null 2>&1
 done
 
 imggen="true"
@@ -56,16 +61,24 @@ for dd in proc/*; do
     updatething "Sequences" $seqs $mapfile
     perl -pi -e "s/bi-rules\.yaml,//g" $mapfile
 
-    perl -pi -e "s/(Title: .*?) *(\[.*\])? *$/\1 [PBA]/g" $mapfile
-    perl -pi -e "s/(Categories:.*)/Categories: PBA/g" $mapfile
-
-    grep -q "Categories:" $mapfile || printf "\nCategories: PBA\n" >> $mapfile
+    perl -pi -e "s/(Title: .*?) *(\[.*\])? *$/\1 $titleappend/g" $mapfile
+    perl -pi -e "s/(Categories:.*)/Categories: $category/g" $mapfile
+    grep -q "Categories:" $mapfile || printf "\nCategories: $category\n" >> $mapfile
 
     # so we can present it more nicely later :p
-    imggen="$imggen; printf \"$cs\"\"Compositing map previews... (processing $d)\"; if [ \"$(grep "^$d$" .imgregen)\" ]; then (cd new/$d; zip -rq ../../proc/t.oramap *); $orautil ra --refresh-map $(pwd)/proc/t.oramap; rm -r new/$d; mkdir new/$d; (cd new/$d; unzip -q ../../proc/t.oramap); rm proc/t.oramap; fi; composite pbaoverlay.png -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
+    imggen="$imggen; printf '$cs''Compositing map previews... (processing $d)'"
+    imggen="$imggen; if [ \"$(grep "^$d$" .imgregen)\" ]; then true"
+    imggen="$imggen;     (cd new/$d; zip -rq ../../proc/t.oramap *)"
+    imggen="$imggen;     $orautil ra --refresh-map $(pwd)/proc/t.oramap"
+    imggen="$imggen;     rm -r new/$d"
+    imggen="$imggen;     mkdir new/$d"
+    imggen="$imggen;     (cd new/$d; unzip -q ../../proc/t.oramap)"
+    imggen="$imggen;     rm proc/t.oramap"
+    imggen="$imggen; fi"
+    imggen="$imggen; composite $previewoverlay -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
 
-    # because imagegen was lazy so must this be
-    zipmaps="$zipmaps; printf \"$cs\"\"Zipping maps... (processing $d)\"; (cd new/$d; zip -r ../$d-PBA.oramap . >/dev/null)"
+    # imagegen was lazy so this must be as well
+    zipmaps="$zipmaps; printf \"$cs\"\"Zipping maps... (processing $d)\"; (cd new/$d; zip -r ../$d-$fnameappend.oramap . >/dev/null)"
 done
 printf "$cs""Updating YAMLs... done.\n"
 
@@ -74,6 +87,4 @@ printf "$cs""Compositing map previews... done.\n"
 sh -c "$zipmaps"  # actually zip maps now
 printf "$cs""Zipping maps... done.\n"
 
-mv new/*.oramap PBAmaps
-
-zip -r PBAmaps.zip PBAmaps >/dev/null
+mv new/*.oramap moddedmaps

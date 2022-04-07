@@ -1,4 +1,7 @@
-you need a POSIX environment, jq, zip+unzip, cURL, dos2unix and imagemagick to run this
-you can delete a line from .mapcache to redownload the map.
-do NOT under any circumstances modify .namecache. If it is corrupted you must
+You need a POSIX environment, jq, zip+unzip, cURL, dos2unix and imagemagick to run this.
+Deleting a line from .idcache causes the map to be redownloaded.
+Do NOT under any circumstances modify .namecache. If it is corrupted you must
 make clean; make
+
+Edit config.sh to configure the tool. This is not optional.
+Edit briefing.txt to edit the mission briefing.
