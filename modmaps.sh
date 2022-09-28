@@ -13,7 +13,9 @@ updatething() {
 
 for d in manual/*; do
     # if it's not a directory it's a zip
-    [ "$(file -b $d)" = "directory" ] || cp -R $d .mapcache >/dev/null 2>&1
+    [ -d "$d" ] || cp -R $d .mapcache >/dev/null 2>&1
+    # if it's executable, imgregen
+    [ -x "$d" ] && echo "$(basename "$d" .oramap)" >> .imgregen
 done
 
 for oram in .mapcache/*.oramap; do
