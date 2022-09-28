@@ -50,15 +50,16 @@ for dd in proc/*; do
 
     cp -R $dd new
     for f in $(sh -c "echo diffs/{$(echo $rules),$(echo $weaps),$(echo $notifs),$(echo $seqs),$(echo $assets)}"); do
+        [ $f = "diffs/" ] && continue
         cp $f new/$d
     done
 
     printf "$cs""Updating YAMLs... (processing $d)"
     find new/$d -name '*.yaml' -exec dos2unix {} \; 2>/dev/null
-    updatething "Rules" $rules $mapfile
-    updatething "Weapons" $weaps $mapfile
-    updatething "Notifications" $notifs $mapfile
-    updatething "Sequences" $seqs $mapfile
+    updatething "Rules" "$rules" $mapfile
+    updatething "Weapons" "$weaps" $mapfile
+    updatething "Notifications" "$notifs" $mapfile
+    updatething "Sequences" "$seqs" $mapfile
     perl -pi -e "s/bi-rules\.yaml,//g" $mapfile
 
     perl -pi -e "s/(Title: .*?) *(\[.*\])? *$/\1 $titleappend/g" $mapfile
