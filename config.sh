@@ -1,7 +1,7 @@
 # all variables may be left as ""
 # rules, notifs, seqs, weaps, and assets should be comma-seperated
 
-rules="pba-balance-rules.yaml,pba-briefing-rules.yaml,bi-balance-rules.yaml,bi-lobby-rules.yaml,bi-player-rules.yaml,ERCC21andBCC-rules.yaml"
+rules="pba-balance-rules.yaml,briefing-rules.yaml,bi-balance-rules.yaml,bi-lobby-rules.yaml,bi-player-rules.yaml,ERCC21andBCC-rules.yaml"
 notifs="pba-notifications.yaml"
 seqs="bi-sequences.yaml,ERCC2-sequences.yaml"
 weaps="ragl-weapons.yaml,bi-weapons.yaml,pba-weapons-rules.yaml"
