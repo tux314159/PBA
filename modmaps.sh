@@ -78,6 +78,7 @@ for dd in proc/*; do
     imggen="$imggen;     (cd new/$d; unzip -q ../../proc/t.oramap)"
     imggen="$imggen;     rm proc/t.oramap"
     imggen="$imggen; fi"
+    imggen="$imggen; composite $previewbackground -gravity south -resize $(identify -format '%wx%h^' new/$d/map.png) new/$d/map.png new/$d/map.png"
     imggen="$imggen; composite $previewoverlay -gravity south -resize $(identify -format '%wx%h' new/$d/map.png) new/$d/map.png new/$d/map.png"
 
     # imagegen was lazy so this must be as well

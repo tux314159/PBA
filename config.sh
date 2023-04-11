@@ -11,6 +11,7 @@ assets="gpssactiveicon.shp,harv-flipped_top.shp,pip-skull.shp,ref-anim.shp,ref-b
 titleappend="[PBA]"
 # overlay image to composite on map preview
 previewoverlay="overlay.png"
+previewbackground="water.png"
 # map category
 category="PBA"
 
